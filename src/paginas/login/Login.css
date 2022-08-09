@@ -1,0 +1,17 @@
+.text-decorator-none{
+        text-decoration: none;
+}
+.bg-theme2{
+    background-image: url("https://i.imgur.com/msp8esx.jpg") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.botao{
+    border-color: black !important;
+    background-color: #660066 !important;
+    color: white !important;
+}
+.login{
+    font-weight: bold !important;
+}

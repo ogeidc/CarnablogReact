@@ -1,0 +1,19 @@
+.bg-navbar{
+    background: linear-gradient(90deg, rgba(249,22,2,1) 1%, rgba(247,135,5,1) 20%, rgba(251,249,45,1) 37%, rgba(74,245,10,1) 55%, rgba(7,241,238,1) 75%, rgba(29,2,235,1) 100%);
+}
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
+.item-align{
+    display: flex;
+    justify-content: space-between;
+
+}
+.text-decorator-none{
+    text-decoration: none;
+}

@@ -1,13 +1,20 @@
-.titulo{
-    color: red;
-    text-align: center;
+
+.bg-theme1{
+    background-image: url("https://i.imgur.com/wBustTe.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.img{
-    width: 400px;
-    height: 300px;
-    display: block;
-    margin: 0 auto;
-}
-.center{
-    text-align: center;
-}
+.txt-format{
+    color: white;
+   
+ }
+ .botao{
+    border-color: black !important;
+    background-color: white !important;
+    color: black !important;
+ 
+ }
+ .postagens{
+    background-color: white;
+ }
