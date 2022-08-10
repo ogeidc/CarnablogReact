@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Typography, Grid, Button} from '@material-ui/core';
 import { Box } from '@mui/material';
 import TabPostagem from "../../components/postagens/tabpostagem/TabPostagem";
 import './Home.css';
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
 
 function Home() {
+    
+    let navigate = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+    
+    useEffect(() => {
+      if (token == "") {
+          alert("Você precisa estar logado")
+          navigate("/login")
+  
+      }
+  }, [token])
     return (
         <>
          <Grid container direction="row" justifyContent="center" alignItems="center" className='bg-theme1'>
@@ -16,7 +32,9 @@ function Home() {
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
                         </Box>
+                        <Link to="/posts" className="text-decorator-none">
                         <Button variant="outlined" className="botao">Ver Postagens</Button>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
