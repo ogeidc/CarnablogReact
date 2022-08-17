@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import UserLogin from '../../models/UserLogin';
 import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/Actions';
+import { toast } from 'react-toastify';
 
     function Login(){
         let history = useNavigate();
@@ -43,9 +44,27 @@ import { addToken } from '../../store/tokens/Actions';
                 e.preventDefault();
                 try{
                     await login(`/usuarios/logar`, userLogin, setToken)
-                    alert('Usuário logado com sucesso');
+                    toast.success("Usuario logado com sucesso", {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover:false,
+                        draggable: false,
+                        theme: "colored",
+                        progress: undefined,
+                    });
                 } catch(error)  {
-                        alert('Dados incompletos, verifique a informação e tente novamente');
+                    toast.error("Dados do usuário inconsistentes. Erro ao logar!", {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover:false,
+                        draggable: false,
+                        theme: "colored",
+                        progress: undefined,
+                    });
                 }
                 
             

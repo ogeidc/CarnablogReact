@@ -32,8 +32,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "CI=false && react-scripts build",
+    "teste": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -53,5 +53,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  
   }
+  
 }
