@@ -7,6 +7,7 @@ import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 
 function CadastroPost() {
@@ -19,7 +20,16 @@ function CadastroPost() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error("Você precisa estar logado", {
+                position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover:false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+        });
             navigate("/login")
 
         }
@@ -93,7 +103,16 @@ function CadastroPost() {
                     'Authorization': token
                 }
             })
-            alert('Postagem cadastrada com sucesso');
+            toast.success("Produto atualizado com sucesso", {
+                position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover:false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+              });
         }
         back()
 
